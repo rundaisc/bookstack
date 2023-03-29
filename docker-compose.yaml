@@ -1,0 +1,21 @@
+version: '3'
+services:
+  bookstack:
+    user: root
+    image: solidnerd/bookstack:23.2
+    container_name: bookstack
+    restart: always
+    ports:
+      - "8080:8080"
+    environment:
+        - "DB_HOST=139.9.208.129"
+        - "DB_DATABASE=bookstack"
+        - "DB_USERNAME=root"
+        - "DB_PASSWORD=XgR2NbhVs3xBlM6K"
+        - "APP_URL=http://127.0.0.1"
+    networks:
+      - bookstack
+networks:
+  bookstack:
+      external: true
+
