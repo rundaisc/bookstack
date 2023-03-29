@@ -11,6 +11,12 @@ services:
       - bookstack
     volumes:
       - "./.env:/var/www/bookstack/.env"
+    environment:
+        - "DB_HOST="
+        - "DB_DATABASE=bookstack"
+        - "MYSQL_PASSWORD="
+        - "DB_PASSWORD="
+        - "APP_URL"
 networks:
   bookstack:
       external: true
